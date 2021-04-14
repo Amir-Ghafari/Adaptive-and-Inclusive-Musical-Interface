@@ -17,13 +17,14 @@ void setup()
   HM10.setTimeout(50); //set timeout
   HM10.write("AT+ROLE1");
   delay(50);
-  bluetooth.write("AT+NOTI1");
+  HM10.write("AT+NOTI1");
   delay(50);
-  bluetooth.write("AT+CONC40BCB403020");
+  HM10.write("AT+CONc5c9c331914b");
   delay(50);
 }
 void loop()
 {
      while (HM10.available() > 0) {
-      String response = bluetooth.readString();
+      String response = HM10.readString();
+}
 }
